@@ -1,8 +1,8 @@
-﻿using DateTime = System.DateTime;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UI = UnityEngine.UI;
+using DateTime = System.DateTime;
 
 public class Calendar: MonoBehaviour {
     // -- fields --
@@ -16,7 +16,6 @@ public class Calendar: MonoBehaviour {
 
     // -- props --
     private DateTime mDate;
-    private int interval;
 
     // -- commands --
     protected void ResetDate() {
@@ -25,9 +24,7 @@ public class Calendar: MonoBehaviour {
     }
 
     protected void AdvanceDate() {
-        var days = (NextBirthday() - mDate).Days;
-        var interval = Mathf.Max(days - 10, 1);
-        Debug.Log("days: " + days + " interval: " + interval);
+        var interval = Mathf.Max((NextBirthday() - mDate).Days - 10, 1);
         mDate = mDate.AddDays(Random.Range(1, interval));
         this.Render();
     }
