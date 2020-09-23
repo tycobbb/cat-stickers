@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UI = UnityEngine.UI;
 
 public class MainMenu: Fungus.MenuDialog {
     // -- commands --
@@ -11,7 +11,7 @@ public class MainMenu: Fungus.MenuDialog {
 
         // show the appropriate dividers
         var i = 0;
-        var dividers = gameObject.GetComponentsInChildren<Image>(true);
+        var dividers = gameObject.GetComponentsInChildren<UI.Image>(true);
 
         foreach (var divider in dividers) {
             if (divider.name != "Divider") {
