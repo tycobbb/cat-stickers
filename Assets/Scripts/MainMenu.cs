@@ -14,7 +14,19 @@ public class MainMenu: F.MenuDialog {
     private bool mIsAwake = false;
     private float? mAnimationStart = null;
 
-    // -- extensions --
+    // -- lifecycle --
+    protected override void Awake() {
+        base.Awake();
+        mIsAwake = true;
+    }
+
+    protected virtual void Update() {
+        if (IsAnimationComplete()) {
+            StopAnimation();
+        }
+    }
+
+    // -- overrides --
     public override void SetActive(bool isActive) {
         if (gameObject.activeSelf == isActive || IsAnimating()) {
             return;
@@ -31,6 +43,15 @@ public class MainMenu: F.MenuDialog {
         } else {
             StartAnimation(1.0f, 0.0f);
         }
+    }
+
+    public override void SetButtonActive(UI.Button button, bool isActive) {
+        // don't disable buttons when preventing menu fade to avoid UI flash
+        if (!mFadeWhenDone && !isActive) {
+            return;
+        }
+
+        base.SetButtonActive(button, isActive);
     }
 
     public override bool AddOption(string text, bool interactable, bool hideOption, Fungus.Block targetBlock) {
@@ -60,18 +81,6 @@ public class MainMenu: F.MenuDialog {
         }
 
         base.Clear();
-    }
-
-    // -- lifecycle --
-    protected virtual void Awake() {
-        base.Awake();
-        mIsAwake = true;
-    }
-
-    protected virtual void Update() {
-        if (IsAnimationComplete()) {
-            StopAnimation();
-        }
     }
 
     // -- commands --
