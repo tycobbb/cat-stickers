@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UI = UnityEngine.UI;
 
-public class AvoidSpam: MonoBehaviour {
+public class SpamAvoid: MonoBehaviour {
     // -- constants --
-    private const int kSpawnInterval = 6;
+    private const int kSpawnInterval = 1;
     private const int kSpawnGroup = 5 * kSpawnInterval;
     private const int kSpawnMax = 100 * kSpawnInterval;
 
