@@ -18,8 +18,8 @@ public class AvoidSpam: MonoBehaviour {
     private int mFrame = 0;
     private GameObject mPrototype;
 
-    // -- commands --
-    protected void Start() {
+    // -- lifecycle --
+    protected void OnEnable() {
         var prototype = Object.Instantiate(fMenu, transform);
         prototype.name = "AvoidButton";
 
@@ -60,7 +60,6 @@ public class AvoidSpam: MonoBehaviour {
         Destroy(button.GetComponentInChildren<UI.Image>().gameObject);
 
         // show menu
-        prototype.SetActive(true);
         mPrototype = prototype;
     }
 
