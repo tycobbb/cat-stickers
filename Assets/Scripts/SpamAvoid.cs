@@ -1,34 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UI = UnityEngine.UI;
 
 public class SpamAvoid: MonoBehaviour {
     // -- constants --
-    private const int kSpawnInterval = 1;
-    private const int kSpawnGroup = 5 * kSpawnInterval;
-    private const int kSpawnMax = 100 * kSpawnInterval;
+    private const int kLastGeneration = 6;
+    private const int kGenerationScale = 3;
 
     // -- fields --
     [Tooltip("The actual menu")]
     [SerializeField]
     protected GameObject fMenu;
 
+    [Tooltip("The message on send on completion")]
+    [SerializeField]
+    protected string fOnComplete;
+
     // -- props --
-    private int mFrame = 0;
-    private GameObject mPrototype;
+    private GameObject mPrefab;
+    private int mGeneration = 0;
+    private bool mIsComplete = false;
 
     // -- lifecycle --
     protected void OnEnable() {
-        var prototype = Object.Instantiate(fMenu, transform);
-        prototype.name = "AvoidButton";
+        var prefab = Object.Instantiate(fMenu, transform);
+        prefab.SetActive(false);
+        prefab.name = "AvoidButton";
 
         // remove extraneous components
-        Destroy(prototype.GetComponent<MainMenu>());
-        Destroy(prototype.GetComponent<Fungus.Character>());
+        Destroy(prefab.GetComponent<MainMenu>());
+        Destroy(prefab.GetComponent<Fungus.Character>());
 
         // destroy extraneous children
-        var selectables = prototype.GetComponentsInChildren<UI.Selectable>();
+        var selectables = prefab.GetComponentsInChildren<UI.Selectable>();
         if (selectables == null) {
             return;
         }
@@ -37,7 +43,7 @@ public class SpamAvoid: MonoBehaviour {
             Destroy(selectable.gameObject);
         }
 
-        var buttons = prototype.GetComponentsInChildren<UI.Button>(true);
+        var buttons = prefab.GetComponentsInChildren<UI.Button>(true);
         if (buttons == null) {
             return;
         }
@@ -50,7 +56,7 @@ public class SpamAvoid: MonoBehaviour {
         }
 
         // show the menu at the right layer
-        var canvas = prototype.GetComponent<Canvas>();
+        var canvas = prefab.GetComponent<Canvas>();
         canvas.sortingOrder = -2;
 
         // set the button text/style
@@ -59,33 +65,65 @@ public class SpamAvoid: MonoBehaviour {
         button.GetComponentInChildren<UI.Text>().text = "Avoid";
         Destroy(button.GetComponentInChildren<UI.Image>().gameObject);
 
-        // show menu
-        mPrototype = prototype;
-    }
+        // store the prefab
+        mPrefab = prefab;
 
-    protected void Update() {
-        if (mFrame >= kSpawnMax) {
-            return;
-        }
-
-        mFrame++;
-        if (mFrame % kSpawnInterval != 0) {
-            return;
-        }
-
-        // create a new menu
-        var spawned = Object.Instantiate(mPrototype, transform);
-
-        // assign it a random position based on frame interval
-        var group = mFrame / kSpawnGroup + 1;
-        var child = spawned.transform.Find("ButtonRow").GetComponent<RectTransform>();
-        var point = Random.insideUnitCircle;
-        child.anchoredPosition = point.normalized * group * 60.0f + point * group * 40.0f;
+        // create the first generation
+        StartCoroutine(SpawnInitialButton());
     }
 
     protected void OnDisable() {
         foreach (Transform child in transform) {
             Destroy(child.gameObject);
         }
+    }
+
+    // -- commands --
+    private IEnumerator SpawnInitialButton() {
+        yield return 0;
+        SpawnButtons();
+    }
+
+    private void SpawnButtons() {
+        var generation = mGeneration++;
+        var count = System.Math.Max(1, generation * kGenerationScale);
+
+        for (var i = 0; i < count; i++) {
+            var spawned = Object.Instantiate(mPrefab, transform);
+
+            // assign it a random position based on generation
+            var child = spawned.transform.Find("ButtonRow").GetComponent<RectTransform>();
+            var p1 = Random.insideUnitCircle.normalized;
+            var p2 = Random.insideUnitCircle;
+            child.anchoredPosition = p1 * generation * 100.0f + p2 * 160.0f;
+
+            // create buttons in the next generation on click
+            var button = spawned.GetComponentInChildren<UI.Button>();
+            button.onClick.AddListener(this.DidClickButton(spawned));
+
+            spawned.SetActive(true);
+        }
+    }
+
+    // -- events --
+    private UnityAction DidClickButton(GameObject spawned) {
+        return () => {
+            Destroy(spawned);
+
+            if (mGeneration <= kLastGeneration) {
+                SpawnButtons();
+            } else {
+                DidClickTerminalButton();
+            }
+        };
+    }
+
+    private void DidClickTerminalButton() {
+        if (mIsComplete) {
+            return;
+        }
+
+        mIsComplete = true;
+        Fungus.Flowchart.BroadcastFungusMessage(fOnComplete);
     }
 }

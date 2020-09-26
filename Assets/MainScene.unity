@@ -6419,8 +6419,6 @@ GameObject:
   - component: {fileID: 1493452001}
   - component: {fileID: 1493452000}
   - component: {fileID: 1493452004}
-  - component: {fileID: 1493452006}
-  - component: {fileID: 1493452005}
   - component: {fileID: 1493451928}
   - component: {fileID: 1493451927}
   - component: {fileID: 1493451926}
@@ -6572,7 +6570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 75.04533, y: 126.41965}
+  scrollPos: {x: 76.271805, y: 122.74021}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 663
@@ -6584,9 +6582,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1493451873}
+  - {fileID: 1493451816}
   selectedCommands:
-  - {fileID: 1493452037}
+  - {fileID: 1493451824}
   variables:
   - {fileID: 1493451961}
   - {fileID: 1493451939}
@@ -7015,8 +7013,6 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1493451824}
-  - {fileID: 1493452005}
-  - {fileID: 1493452006}
   - {fileID: 1493451999}
   - {fileID: 1493452003}
   - {fileID: 1493452002}
@@ -17021,56 +17017,6 @@ MonoBehaviour:
   targetAlpha:
     floatRef: {fileID: 0}
     floatVal: 1
---- !u!114 &1493452005
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493451796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 338
-  indentLevel: 0
-  text: Avoid
-  description: 
-  targetBlock: {fileID: 1493451816}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
---- !u!114 &1493452006
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493451796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 337
-  indentLevel: 0
-  text: Avoid
-  description: 
-  targetBlock: {fileID: 1493451816}
-  hideIfVisited: 0
-  interactable:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  setMenuDialog: {fileID: 0}
-  hideThisOption:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
 --- !u!114 &1493452007
 MonoBehaviour:
   m_ObjectHideFlags: 2
