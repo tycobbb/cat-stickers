@@ -10,8 +10,8 @@ public class MainMenu: F.MenuDialog {
     private LeanTweenType kEasing = LeanTweenType.easeOutQuad;
 
     // -- props --
-    private bool mFadeWhenDone = true;
     private bool mIsAwake = false;
+    private bool mIsVisibilityLocked = false;
     private float? mAnimationStart = null;
 
     // -- lifecycle --
@@ -28,12 +28,12 @@ public class MainMenu: F.MenuDialog {
 
     // -- overrides --
     public override void SetActive(bool isActive) {
-        if (gameObject.activeSelf == isActive || IsAnimating()) {
+        if (IsActive() == isActive || IsAnimating()) {
             return;
         }
 
-        // ignore SetActive(false) if preventing fade
-        if (!isActive && !mFadeWhenDone) {
+        // if visibility is locked, ignore SetActive(false)
+        if (!isActive && mIsVisibilityLocked) {
             return;
         }
 
@@ -46,8 +46,8 @@ public class MainMenu: F.MenuDialog {
     }
 
     public override void SetButtonActive(UI.Button button, bool isActive) {
-        // don't disable buttons when preventing menu fade to avoid UI flash
-        if (!mFadeWhenDone && !isActive) {
+        // if visibility is locked, don't disable buttons to prevent flicker
+        if (mIsVisibilityLocked && !isActive) {
             return;
         }
 
@@ -67,15 +67,15 @@ public class MainMenu: F.MenuDialog {
             return;
         }
 
-        // run the base implementation if no animation to bother with
-        if (!mFadeWhenDone) {
+        // if visibility is locked there are no animations, so run the base implementation
+        if (mIsVisibilityLocked) {
             base.Clear();
             return;
         }
 
-        // otherwise, short-circuit when animating out, since this sometimes gets called
+        // otherwise, if active short-circuit to animate out, since this sometimes gets called
         // before SetActive(false).
-        if (gameObject.activeSelf && !IsAnimating()) {
+        if (IsActive() && !IsAnimating()) {
             StartAnimation(1.0f, 0.0f);
             return;
         }
@@ -84,12 +84,12 @@ public class MainMenu: F.MenuDialog {
     }
 
     // -- commands --
-    public void PreventFade() {
-        mFadeWhenDone = false;
+    public void LockVisibility() {
+        mIsVisibilityLocked = true;
     }
 
-    public void ResumeFade() {
-        mFadeWhenDone = true;
+    public void UnlockVisibility() {
+        mIsVisibilityLocked = false;
     }
 
     private void ShowDividers() {
@@ -132,6 +132,10 @@ public class MainMenu: F.MenuDialog {
     }
 
     // -- queries --
+    private bool IsActive() {
+        return gameObject.activeSelf;
+    }
+
     private bool IsAnimating() {
         return mAnimationStart != null;
     }

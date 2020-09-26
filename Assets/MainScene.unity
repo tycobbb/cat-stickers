@@ -1286,7 +1286,7 @@ GameObject:
   - component: {fileID: 414310352}
   - component: {fileID: 414310353}
   m_Layer: 0
-  m_Name: AvoidSpam
+  m_Name: SpamAvoid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1816,7 +1816,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &517813811
 MonoBehaviour:
@@ -3517,7 +3517,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &774897652
 MonoBehaviour:
@@ -5277,7 +5277,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1268709338
 RectTransform:
@@ -6083,8 +6083,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 444.35852
-    y: -156.53963
-    width: 77.23304
+    y: -141.74057
+    width: 76.974846
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -6115,21 +6115,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 235.76491, y: 253.14577}
+  scrollPos: {x: 92.55652, y: 169.87546}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 359
-  zoom: 0.45900124
+  zoom: 0.519002
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1493451816}
-  selectedCommands:
-  - {fileID: 1493451929}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1493451961}
   - {fileID: 1493451939}
@@ -6177,9 +6175,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 426.47525
-    y: 3.1452923
-    width: 115.3593
+    x: 424.73914
+    y: 43.692356
+    width: 119.36389
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6188,8 +6186,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1493451807}
   - {fileID: 1493451859}
+  - {fileID: 1493451807}
   - {fileID: 1493451821}
   - {fileID: 1493451820}
   - {fileID: 1493451819}
@@ -6251,7 +6249,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 447.81558
     y: 251.96402
-    width: 75.0544
+    width: 76.974846
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6357,7 +6355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 9
-  indentLevel: 0
+  indentLevel: 1
   _duration:
     floatRef: {fileID: 0}
     floatVal: 1
@@ -6474,9 +6472,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 603.4907
-    y: 79.642456
-    width: 115.3593
+    x: 605.2268
+    y: 95.26735
+    width: 121.290665
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6544,9 +6542,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 426.75922
-    y: 154.16951
-    width: 117.53794
+    x: 424.64508
+    y: 152.43341
+    width: 121.290665
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7532,14 +7530,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 346
   indentLevel: 0
-  description: Resume Menu Fade
+  description: Unlock Visibility
   targetObject: {fileID: 587066301}
   targetComponentAssemblyName: MainMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: MainMenu
-  targetMethod: ResumeFade
-  targetMethodText: 'ResumeFade (): Void'
+  targetMethod: UnlockVisibility
+  targetMethodText: 'UnlockVisibility (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -7560,14 +7558,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 345
   indentLevel: 1
-  description: 
+  description: Lock Visibility
   targetObject: {fileID: 587066301}
   targetComponentAssemblyName: MainMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: MainMenu
-  targetMethod: PreventFade
-  targetMethodText: 'PreventFade (): Void'
+  targetMethod: LockVisibility
+  targetMethodText: 'LockVisibility (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -8108,7 +8106,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 429.386
     y: 343.9926
-    width: 109.91269
+    width: 115.510345
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8240,7 +8238,7 @@ MonoBehaviour:
   itemId: 71
   indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1493451816}
+  targetBlock: {fileID: 1493451804}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -8327,8 +8325,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 241.65887
-    y: -155.43849
-    width: 114.26998
+    y: -138.5253
+    width: 121.290665
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8670,7 +8668,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 600.6581
     y: 251.77843
-    width: 120.80591
+    width: 127.07099
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8885,7 +8883,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 916.73126
     y: 464.2706
-    width: 83.76897
+    width: 86.60872
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8961,7 +8959,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 435.37616
     y: 442.90222
-    width: 102.287445
+    width: 105.876465
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9371,7 +9369,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 769.3475
     y: 550.9095
-    width: 77.23304
+    width: 78.90162
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12641,7 +12639,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 917.2232
     y: 550.9399
-    width: 81.59033
+    width: 84.681946
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12949,7 +12947,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 608.29376
     y: 549.946
-    width: 103.37676
+    width: 103.94969
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12978,7 +12976,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 429.84506
     y: 549.10913
-    width: 109.91269
+    width: 117.43712
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13317,7 +13315,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1493451929
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14078,7 +14076,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 434.59174
     y: 645.54224
-    width: 102.287445
+    width: 107.80324
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14172,7 +14170,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 431.13452
     y: 758.33844
-    width: 111.002014
+    width: 117.43712
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14276,7 +14274,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 436.1155
     y: 866.7562
-    width: 103.37676
+    width: 107.80324
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14348,8 +14346,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 444.9708
-    y: -74.56836
-    width: 75.0544
+    y: -57.842476
+    width: 76.974846
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14435,7 +14433,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 248.36058
     y: 865.7031
-    width: 101.19812
+    width: 107.80324
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14721,7 +14719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: Debug
-  value: 0
+  value: 1
 --- !u!114 &1493451962
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14768,7 +14766,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 906.1785
     y: 629.0865
-    width: 107.73405
+    width: 111.65679
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16441,7 +16439,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 5
+    floatVal: 3
   durationOLD: 0
 --- !u!114 &1493452004
 MonoBehaviour:
