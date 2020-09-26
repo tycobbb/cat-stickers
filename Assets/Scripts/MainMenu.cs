@@ -12,6 +12,7 @@ public class MainMenu: F.MenuDialog {
     // -- props --
     private bool mIsAwake = false;
     private bool mIsVisibilityLocked = false;
+    private bool mIsBecomingActive = false;
     private float? mAnimationStart = null;
 
     // -- lifecycle --
@@ -28,8 +29,15 @@ public class MainMenu: F.MenuDialog {
 
     // -- overrides --
     public override void SetActive(bool isActive) {
-        if (IsActive() == isActive || IsAnimating()) {
+        // ignore redudant calls to SetActive
+        if (mIsBecomingActive == isActive) {
             return;
+        }
+
+        // force the buttons to clear if something is interrupting the show
+        // animation
+        if (!mIsBecomingActive && isActive) {
+            base.Clear();
         }
 
         // if visibility is locked, ignore SetActive(false)
@@ -73,9 +81,10 @@ public class MainMenu: F.MenuDialog {
             return;
         }
 
+
         // otherwise, if active short-circuit to animate out, since this sometimes gets called
         // before SetActive(false).
-        if (IsActive() && !IsAnimating()) {
+        if (gameObject.activeSelf && !IsAnimating()) {
             StartAnimation(1.0f, 0.0f);
             return;
         }
@@ -111,7 +120,8 @@ public class MainMenu: F.MenuDialog {
 
     // -- commands/animation
     private void StartAnimation(float from, float to) {
-        if (to != 0.0f) {
+        mIsBecomingActive = to != 0.0f;
+        if (mIsBecomingActive) {
             base.SetActive(true);
         }
 
@@ -132,10 +142,6 @@ public class MainMenu: F.MenuDialog {
     }
 
     // -- queries --
-    private bool IsActive() {
-        return gameObject.activeSelf;
-    }
-
     private bool IsAnimating() {
         return mAnimationStart != null;
     }
