@@ -1,40 +1,22 @@
 fileFormatVersion: 2
-guid: 89cce393d139e4192bad3f6b1cf2ddc0
+guid: bf6dc037d30fb44a38b1c2d9f520cd5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3624907368250497581
-    second: Calendar_0
+      213: -7766786080610075462
+    second: CalendarMask_0
   - first:
-      213: -1033676700659112917
-    second: Calendar_1
+      213: -5918674942666979148
+    second: CalendarMask_1
   - first:
-      213: 6163635037527692972
-    second: Calendar_2
+      213: -8853097833597380
+    second: CalendarMask_2
   - first:
-      213: 1292703296179351992
-    second: Calendar_3
+      213: 6915832149229281678
+    second: CalendarMask_3
   - first:
-      213: 4234989768139203751
-    second: Calendar_4
-  - first:
-      213: 8290632817720830589
-    second: Calendar_0
-  - first:
-      213: 8234652212609664057
-    second: Calendar_1
-  - first:
-      213: -3787292419299924098
-    second: Calendar_2
-  - first:
-      213: 639878910471481085
-    second: Calendar_3
-  - first:
-      213: 8649526580397142238
-    second: Calendar_4
-  - first:
-      213: -6135507575677183463
-    second: Calendar_5
+      213: -1464354456264168754
+    second: CalendarMask_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -132,106 +114,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Calendar_0
+      name: CalendarMask_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 116
+        height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a227f3f9e3e0370800000000000000
-      internalID: 8290632817720830589
+      spriteID: abcb9cab535d63490800000000000000
+      internalID: -7766786080610075462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Calendar_1
+      name: CalendarMask_1
       rect:
         serializedVersion: 2
         x: 140
         y: 0
-        width: 128
-        height: 128
+        width: 116
+        height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 934cb7dee8c574270800000000000000
-      internalID: 8234652212609664057
+      spriteID: 4b844558f74acdda0800000000000000
+      internalID: -5918674942666979148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Calendar_2
+      name: CalendarMask_2
       rect:
         serializedVersion: 2
         x: 280
         y: 0
-        width: 128
-        height: 128
+        width: 116
+        height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e77291f4c95d07bc0800000000000000
-      internalID: -3787292419299924098
+      spriteID: c367778872c80eff0800000000000000
+      internalID: -8853097833597380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Calendar_3
+      name: CalendarMask_3
       rect:
         serializedVersion: 2
         x: 420
         y: 0
-        width: 128
-        height: 128
+        width: 116
+        height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df6aae59a7e41e800800000000000000
-      internalID: 639878910471481085
+      spriteID: e81a905b2b8f9ff50800000000000000
+      internalID: 6915832149229281678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Calendar_4
+      name: CalendarMask_4
       rect:
         serializedVersion: 2
         x: 558
         y: 0
-        width: 128
-        height: 128
+        width: 115
+        height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a4e95591c4b5ca30800000000000000
-      internalID: 4234989768139203751
+      spriteID: eca2d1961619dabe0800000000000000
+      internalID: -1464354456264168754
       vertices: []
       indices: 
       edges: []
