@@ -82,9 +82,6 @@ public class MainMenu: F.MenuDialog {
 
         // if visibility is locked there are no animations, so run the base implementation
         if (mIsVisibilityLocked) {
-            if (gameObject.name == "MemoryMenu") {
-                Debug.LogFormat("defaulting to base clear");
-            }
             base.Clear();
             return;
         }
@@ -129,10 +126,6 @@ public class MainMenu: F.MenuDialog {
     private void StartAnimation(float from, float to) {
         mIsBecomingActive = to != 0.0f;
 
-        if (gameObject.name == "MemoryMenu") {
-            Debug.LogFormat("is starting animation {0} > {1}", from, to);
-        }
-
         if (mIsBecomingActive) {
             base.SetActive(true);
         }
@@ -146,8 +139,7 @@ public class MainMenu: F.MenuDialog {
     private void StopAnimation() {
         mAnimationStart = null;
 
-        var group = GetComponent<CanvasGroup>();
-        if (group.alpha == 0.0f) {
+        if (!mIsBecomingActive) {
             base.SetActive(false);
             base.Clear();
         }

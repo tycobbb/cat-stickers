@@ -33,7 +33,6 @@ public class MemoryLens: MonoBehaviour {
 
     // -- commands/helpers
     private void SetLensAlpha(float alpha) {
-        Debug.Log("setting lens alpha");
         var canvas = GetComponent<CanvasGroup>();
         canvas.alpha = alpha;
     }
