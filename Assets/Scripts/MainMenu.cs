@@ -30,18 +30,23 @@ public class MainMenu: F.MenuDialog {
     // -- overrides --
     public override void SetActive(bool isActive) {
         // ignore redudant calls to SetActive
-        if (mIsBecomingActive == isActive) {
+        if (IsAnimatingToActive(isActive)) {
             return;
         }
 
-        // force the buttons to clear if something is interrupting the show
-        // animation
-        if (!mIsBecomingActive && isActive) {
+        // force the buttons to clear if something is interrupting the hide
+        // animation (e.g. a new menu in debug mode)
+        if (IsAnimatingToActive(false) && isActive) {
             base.Clear();
         }
 
         // if visibility is locked, ignore SetActive(false)
-        if (!isActive && mIsVisibilityLocked) {
+        if (mIsVisibilityLocked && !isActive) {
+            return;
+        }
+
+        // if visibility is locked, ignore redudant calls to SetActive
+        if (mIsVisibilityLocked && gameObject.active == isActive) {
             return;
         }
 
@@ -77,10 +82,12 @@ public class MainMenu: F.MenuDialog {
 
         // if visibility is locked there are no animations, so run the base implementation
         if (mIsVisibilityLocked) {
+            if (gameObject.name == "MemoryMenu") {
+                Debug.LogFormat("defaulting to base clear");
+            }
             base.Clear();
             return;
         }
-
 
         // otherwise, if active short-circuit to animate out, since this sometimes gets called
         // before SetActive(false).
@@ -121,6 +128,11 @@ public class MainMenu: F.MenuDialog {
     // -- commands/animation
     private void StartAnimation(float from, float to) {
         mIsBecomingActive = to != 0.0f;
+
+        if (gameObject.name == "MemoryMenu") {
+            Debug.LogFormat("is starting animation {0} > {1}", from, to);
+        }
+
         if (mIsBecomingActive) {
             base.SetActive(true);
         }
@@ -144,6 +156,10 @@ public class MainMenu: F.MenuDialog {
     // -- queries --
     private bool IsAnimating() {
         return mAnimationStart != null;
+    }
+
+    private bool IsAnimatingToActive(bool isActive) {
+        return IsAnimating() && mIsBecomingActive == isActive;
     }
 
     private bool IsAnimationComplete() {

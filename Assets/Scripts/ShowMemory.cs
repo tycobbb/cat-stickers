@@ -18,10 +18,14 @@ public class ShowMemory: F.Command {
     [SerializeField]
     protected MemoryLens fLens;
 
+    [Tooltip("If the color lens is visible")]
+    [SerializeField]
+    protected bool fShouldAnimateLens = true;
+
     // -- lifecycle --
     public override void OnEnter() {
         var percent = (float)(fStep.Value + 1) / fLastStep.Value;
-        fLens.SetPercentComplete(percent);
+        fLens.SetPercentComplete(percent, fShouldAnimateLens);
         Continue();
     }
 }
