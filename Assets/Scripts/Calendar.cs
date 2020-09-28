@@ -18,18 +18,18 @@ public class Calendar: MonoBehaviour {
     private DateTime mDate;
 
     // -- commands --
-    protected void ResetDate() {
+    public void ResetDate() {
         mDate = new DateTime(2017, 8, 10);
         this.Render();
     }
 
-    protected void AdvanceDate() {
+    public void AdvanceDate() {
         var interval = Mathf.Max((NextBirthday() - mDate).Days - 10, 1);
         mDate = mDate.AddDays(Random.Range(1, interval));
         this.Render();
     }
 
-    protected void AdvanceToBirthday() {
+    public void AdvanceToBirthday() {
         mDate = NextBirthday();
         this.Render();
     }
