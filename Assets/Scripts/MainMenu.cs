@@ -6,8 +6,12 @@ using UI = UnityEngine.UI;
 
 public class MainMenu: F.MenuDialog {
     // -- constants --
-    private float kDuration = 0.35f;
-    private LeanTweenType kEasing = LeanTweenType.easeOutQuad;
+    private const LeanTweenType kEasing = LeanTweenType.easeOutQuad;
+
+    // -- field --
+    [Tooltip("The fade duration")]
+    [SerializeField]
+    private float fFadeDuration = 0.35f;
 
     // -- props --
     private bool mIsAwake = false;
@@ -97,6 +101,10 @@ public class MainMenu: F.MenuDialog {
     }
 
     // -- commands --
+    public void SetFadeDuration(float duration) {
+        fFadeDuration = duration;
+    }
+
     public void LockVisibility() {
         mIsVisibilityLocked = true;
     }
@@ -133,7 +141,7 @@ public class MainMenu: F.MenuDialog {
         mAnimationStart = Time.time;
         var group = GetComponent<CanvasGroup>();
         group.alpha = from;
-        LeanTween.alphaCanvas(group, new F.FloatData(to), new F.FloatData(kDuration)).setEase(kEasing);
+        LeanTween.alphaCanvas(group, new F.FloatData(to), new F.FloatData(fFadeDuration)).setEase(kEasing);
     }
 
     private void StopAnimation() {
@@ -155,6 +163,6 @@ public class MainMenu: F.MenuDialog {
     }
 
     private bool IsAnimationComplete() {
-        return IsAnimating() && Time.time - mAnimationStart >= kDuration;
+        return IsAnimating() && Time.time - mAnimationStart >= fFadeDuration;
     }
 }
