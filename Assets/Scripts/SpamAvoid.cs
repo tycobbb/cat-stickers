@@ -6,8 +6,8 @@ using UI = UnityEngine.UI;
 
 public class SpamAvoid: MonoBehaviour {
     // -- constants --
-    private const int kLastGeneration = 6;
-    private const int kGenerationScale = 3;
+    private const int kLastGeneration = 4;
+    private const int kGenerationBase = 3;
 
     // -- fields --
     [Tooltip("The actual menu")]
@@ -81,27 +81,29 @@ public class SpamAvoid: MonoBehaviour {
     // -- commands --
     private IEnumerator SpawnInitialButton() {
         yield return 0;
-        SpawnButtons();
+        StartCoroutine(SpawnButtons());
     }
 
-    private void SpawnButtons() {
+    private IEnumerator SpawnButtons() {
         var generation = mGeneration++;
-        var count = System.Math.Max(1, generation * kGenerationScale);
+        var count = System.Math.Pow(kGenerationBase, generation);
+        // var count = System.Math.Max(1, generation * kGenerationScale);
 
         for (var i = 0; i < count; i++) {
             var spawned = Object.Instantiate(mPrefab, transform);
 
             // assign it a random position based on generation
             var child = spawned.transform.Find("ButtonRow").GetComponent<RectTransform>();
-            var p1 = Random.insideUnitCircle.normalized;
-            var p2 = Random.insideUnitCircle;
-            child.anchoredPosition = p1 * generation * 100.0f + p2 * 160.0f;
+            var point = Random.insideUnitCircle;
+            child.anchoredPosition = new Vector2(point.x * 960.0f, point.y * 540.0f);
 
             // create buttons in the next generation on click
             var button = spawned.GetComponentInChildren<UI.Button>();
             button.onClick.AddListener(this.DidClickButton(spawned));
 
             spawned.SetActive(true);
+
+            yield return 0;
         }
     }
 
@@ -111,7 +113,7 @@ public class SpamAvoid: MonoBehaviour {
             Destroy(spawned);
 
             if (mGeneration <= kLastGeneration) {
-                SpawnButtons();
+                StartCoroutine(SpawnButtons());
             } else {
                 DidClickTerminalButton();
             }
