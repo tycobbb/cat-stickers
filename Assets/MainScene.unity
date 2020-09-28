@@ -7740,6 +7740,7 @@ GameObject:
   - component: {fileID: 1493452136}
   - component: {fileID: 1493452126}
   - component: {fileID: 1493452125}
+  - component: {fileID: 1493452137}
   - component: {fileID: 1493452134}
   m_Layer: 0
   m_Name: MainFlowchart
@@ -7828,7 +7829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 355.64883, y: -171.25963}
+  scrollPos: {x: 279.62857, y: 246.28363}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 569
@@ -7840,9 +7841,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1493452128}
+  - {fileID: 1493451802}
   selectedCommands:
-  - {fileID: 1493452134}
+  - {fileID: 1493451823}
   variables:
   - {fileID: 1493451961}
   - {fileID: 1493451939}
@@ -15703,7 +15704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: Debug_DisableStory
-  value: 1
+  value: 0
 --- !u!114 &1493451940
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -16004,7 +16005,7 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 3696762}
   methodName: AdvanceDate
-  delay: 1.833
+  delay: 0.833
 --- !u!114 &1493451952
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -16472,7 +16473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: Debug
-  value: 1
+  value: 0
 --- !u!114 &1493451962
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18163,7 +18164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: Fade_Duration
-  value: 0.5
+  value: 1.5
 --- !u!114 &1493451997
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -25570,7 +25571,7 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 3696762}
   methodName: AdvanceToBirthday
-  delay: 1.833
+  delay: 0.833
 --- !u!114 &1493452126
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -25587,7 +25588,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 2.5
+    floatVal: 3
   durationOLD: 0
 --- !u!114 &1493452127
 MonoBehaviour:
@@ -25640,8 +25641,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1493452137}
   - {fileID: 1493452136}
-  - {fileID: 1493452134}
   - {fileID: 1493452125}
   - {fileID: 1493452126}
   suppressAllAutoSelections: 0
@@ -25670,6 +25671,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1493452134}
   - {fileID: 1493452127}
   - {fileID: 1493451951}
   - {fileID: 1493452135}
@@ -26100,7 +26102,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1493452134
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -26110,14 +26112,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 570
+  itemId: 572
   indentLevel: 0
   _animator:
     animatorRef: {fileID: 0}
     animatorVal: {fileID: 3696767}
   _parameterName:
     stringRef: {fileID: 0}
-    stringVal: 
+    stringVal: IsBirthday
   value:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -26160,13 +26162,38 @@ MonoBehaviour:
     animatorVal: {fileID: 3696767}
   stateName:
     stringRef: {fileID: 0}
-    stringVal: AdvanceToBirthday
+    stringVal: AdvanceDate
   layer:
     integerRef: {fileID: 0}
     integerVal: -1
   time:
     floatRef: {fileID: 0}
     floatVal: 0
+--- !u!114 &1493452137
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493451796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee63e642958494f1ebed8116ae4b1103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 571
+  indentLevel: 0
+  _animator:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 3696767}
+  _parameterName:
+    stringRef: {fileID: 0}
+    stringVal: IsBirthday
+  value:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  animatorOLD: {fileID: 0}
+  parameterNameOLD: 
 --- !u!1 &1508883982
 GameObject:
   m_ObjectHideFlags: 0
@@ -27320,7 +27347,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822305273}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
