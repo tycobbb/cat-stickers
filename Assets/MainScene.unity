@@ -17508,7 +17508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 1
   key: Debug
-  value: 1
+  value: 0
 --- !u!114 &408528777
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -24285,10 +24285,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 408528857}
-  selectedCommands:
-  - {fileID: 408528618}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 408528776}
   - {fileID: 408528793}
@@ -25735,7 +25733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 408528888}
+  selectedFlowchart: {fileID: 1493451800}
 --- !u!4 &581281860
 Transform:
   m_ObjectHideFlags: 1
