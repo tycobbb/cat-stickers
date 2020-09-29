@@ -823,10 +823,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206136931}
-  - component: {fileID: 206136936}
-  - component: {fileID: 206136935}
-  - component: {fileID: 206136934}
-  - component: {fileID: 206136933}
   - component: {fileID: 206136932}
   m_Layer: 5
   m_Name: MemoryLens
@@ -843,18 +839,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206136930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1775584248}
+  m_LocalPosition: {x: 0, y: 0, z: 348.125}
+  m_LocalScale: {x: 0.035460994, y: 0.035460994, z: 0.035460994}
+  m_Children: []
   m_Father: {fileID: 1937619241}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -156.51834, y: -236.50888}
+  m_SizeDelta: {x: 500.99997, y: 282}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206136932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,69 +862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642bbcc42a6ec4e91926343c768623aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!222 &206136933
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206136930}
-  m_CullTransparentMesh: 0
---- !u!225 &206136934
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206136930}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
---- !u!114 &206136935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206136930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 72
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!223 &206136936
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206136930}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 1
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 3
-  m_TargetDisplay: 0
 --- !u!1 &207418864
 GameObject:
   m_ObjectHideFlags: 0
@@ -7844,10 +7776,8 @@ GameObject:
   - component: {fileID: 1493452096}
   - component: {fileID: 1493452095}
   - component: {fileID: 1493452092}
-  - component: {fileID: 1493452091}
   - component: {fileID: 1493452098}
   - component: {fileID: 1493452070}
-  - component: {fileID: 1493452099}
   - component: {fileID: 1493452102}
   - component: {fileID: 1493452100}
   - component: {fileID: 1493452103}
@@ -7862,25 +7792,19 @@ GameObject:
   - component: {fileID: 1493452106}
   - component: {fileID: 1493452107}
   - component: {fileID: 1493451832}
-  - component: {fileID: 1493451834}
   - component: {fileID: 1493452011}
-  - component: {fileID: 1493452010}
   - component: {fileID: 1493452008}
   - component: {fileID: 1493452007}
   - component: {fileID: 1493451998}
-  - component: {fileID: 1493451997}
   - component: {fileID: 1493451972}
   - component: {fileID: 1493451930}
   - component: {fileID: 1493452109}
   - component: {fileID: 1493452108}
-  - component: {fileID: 1493452069}
   - component: {fileID: 1493452063}
   - component: {fileID: 1493452017}
   - component: {fileID: 1493452116}
   - component: {fileID: 1493452110}
   - component: {fileID: 1493452066}
-  - component: {fileID: 1493452009}
-  - component: {fileID: 1493451973}
   - component: {fileID: 1493452119}
   - component: {fileID: 1493452118}
   - component: {fileID: 1493452117}
@@ -7912,7 +7836,6 @@ GameObject:
   - component: {fileID: 1493452137}
   - component: {fileID: 1493452134}
   - component: {fileID: 1493452016}
-  - component: {fileID: 1493451824}
   - component: {fileID: 1493452130}
   - component: {fileID: 1493452131}
   - component: {fileID: 1493452141}
@@ -7998,6 +7921,18 @@ GameObject:
   - component: {fileID: 1493452195}
   - component: {fileID: 1493451894}
   - component: {fileID: 1493452199}
+  - component: {fileID: 1493452010}
+  - component: {fileID: 1493451997}
+  - component: {fileID: 1493451834}
+  - component: {fileID: 1493452099}
+  - component: {fileID: 1493452091}
+  - component: {fileID: 1493452009}
+  - component: {fileID: 1493451973}
+  - component: {fileID: 1493452069}
+  - component: {fileID: 1493452201}
+  - component: {fileID: 1493452200}
+  - component: {fileID: 1493452202}
+  - component: {fileID: 1493451824}
   m_Layer: 0
   m_Name: MainFlowchart
   m_TagString: Untagged
@@ -8085,7 +8020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -406.932, y: -193.63757}
+  scrollPos: {x: 407.08786, y: 300.01944}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 569
@@ -8097,9 +8032,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1493451910}
+  - {fileID: 1493451955}
   selectedCommands:
-  - {fileID: 1493451902}
+  - {fileID: 1493452159}
   variables:
   - {fileID: 1493451961}
   - {fileID: 1493451939}
@@ -8117,7 +8052,7 @@ MonoBehaviour:
   - {fileID: 1493451965}
   - {fileID: 1493452062}
   - {fileID: 1493452092}
-  - {fileID: 1493452091}
+  - {fileID: 1493452010}
   - {fileID: 1493452102}
   description: 
   stepPause: 0
@@ -8243,13 +8178,13 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1493451831}
   - {fileID: 1493451911}
   - {fileID: 1493451867}
   - {fileID: 1493451989}
   - {fileID: 1493452004}
   - {fileID: 1493451988}
   - {fileID: 1493451987}
-  - {fileID: 1493451831}
   - {fileID: 1493451838}
   - {fileID: 1493451829}
   - {fileID: 1493451797}
@@ -8474,7 +8409,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 1493451812}
   - {fileID: 1493451810}
-  - {fileID: 1493451824}
   suppressAllAutoSelections: 0
 --- !u!114 &1493451814
 MonoBehaviour:
@@ -8543,6 +8477,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1493452202}
+  - {fileID: 1493451824}
   - {fileID: 1493451999}
   suppressAllAutoSelections: 0
 --- !u!114 &1493451817
@@ -9500,7 +9436,7 @@ MonoBehaviour:
     vector3Val: {x: 0, y: 0, z: 0}
 --- !u!114 &1493451824
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9510,17 +9446,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 574
+  itemId: 686
   indentLevel: 0
-  description: Unlock Visibility
+  description: Hide Menu
   targetObject: {fileID: 587066301}
   targetComponentAssemblyName: MainMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: MainMenu
-  targetMethod: UnlockVisibility
-  targetMethodText: 'UnlockVisibility (): Void'
-  methodParameters: []
+  targetMethod: SetActive
+  targetMethodText: 'SetActive (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -9540,7 +9493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 345
   indentLevel: 1
-  description: Lock Visibility
+  description: Lock Menu Visibility
   targetObject: {fileID: 587066301}
   targetComponentAssemblyName: MainMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
@@ -9759,21 +9712,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 498
-  indentLevel: 1
-  description: Reset Lens
-  targetObject: {fileID: 206136930}
+  itemId: 676
+  indentLevel: 0
+  description: Step Memory Step
+  targetObject: {fileID: 2000868197}
   targetComponentAssemblyName: MemoryLens, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: MemoryLens
-  targetMethod: SetPercentComplete
-  targetMethodText: 'SetPercentComplete (Single, Boolean): Void'
+  targetMethod: SetStep
+  targetMethodText: 'SetStep (Int32): Void'
   methodParameters:
   - objValue:
-      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Single
+      typeFullname: System.Int32
       intValue: 0
       boolValue: 0
       floatValue: 0
@@ -9786,24 +9739,7 @@ MonoBehaviour:
       textureValue: {fileID: 0}
       vector2Value: {x: 0, y: 0}
       vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 1
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
+    variableKey: Grief_Remember_RecallStep
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -10271,7 +10207,7 @@ MonoBehaviour:
   itemId: 71
   indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1493451922}
+  targetBlock: {fileID: 1493451848}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -10898,7 +10834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Grief_ListenStep
+  key: Grief_Listen_Step
   value: 0
 --- !u!114 &1493451873
 MonoBehaviour:
@@ -13072,8 +13008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Grief_ShareStep
-  value: 2
+  key: Grief_Share_Step
+  value: 0
 --- !u!114 &1493451899
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -16721,7 +16657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: Debug
-  value: 1
+  value: 0
 --- !u!114 &1493451962
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -16779,22 +16715,22 @@ MonoBehaviour:
   commandList:
   - {fileID: 1493451969}
   - {fileID: 1493452061}
-  - {fileID: 1493451834}
+  - {fileID: 1493452200}
   - {fileID: 1493452015}
   - {fileID: 1493451970}
-  - {fileID: 1493452099}
+  - {fileID: 1493451997}
   - {fileID: 1493452098}
   - {fileID: 1493452070}
   - {fileID: 1493452107}
   - {fileID: 1493452013}
   - {fileID: 1493452011}
-  - {fileID: 1493452010}
-  - {fileID: 1493452009}
+  - {fileID: 1493452099}
+  - {fileID: 1493452091}
   - {fileID: 1493452008}
   - {fileID: 1493452007}
   - {fileID: 1493452012}
   - {fileID: 1493451998}
-  - {fileID: 1493451997}
+  - {fileID: 1493452009}
   - {fileID: 1493451973}
   - {fileID: 1493451972}
   - {fileID: 1493451930}
@@ -16842,7 +16778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Grief_RememberStep
+  key: Grief_Remember_Step
   value: 0
 --- !u!114 &1493451966
 MonoBehaviour:
@@ -17706,16 +17642,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 534
+  itemId: 680
   indentLevel: 2
-  description: Set Memory Sprite
-  targetObject: {fileID: 206136930}
+  description: Set Memory
+  targetObject: {fileID: 2000868197}
   targetComponentAssemblyName: MemoryLens, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: MemoryLens
   targetMethod: SetMemory
-  targetMethodText: 'SetMemory (SpriteRenderer, Single, Boolean): Void'
+  targetMethodText: 'SetMemory (SpriteRenderer, Int32, Int32, Int32, Int32): Void'
   methodParameters:
   - objValue:
       typeAssemblyname: UnityEngine.SpriteRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -17735,9 +17671,26 @@ MonoBehaviour:
       vector3Value: {x: 0, y: 0, z: 0}
     variableKey: 
   - objValue:
-      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Single
+      typeFullname: System.Int32
+      intValue: 3
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: Grief_Remember_RecallLast
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
       intValue: 0
       boolValue: 0
       floatValue: 0
@@ -17750,13 +17703,30 @@ MonoBehaviour:
       textureValue: {fileID: 0}
       vector2Value: {x: 0, y: 0}
       vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: Grief_RememberFadeDuration
+    variableKey: 
   - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
+      typeFullname: System.Int32
       intValue: 0
-      boolValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -18411,7 +18381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Fade_Duration
+  key: Game_FadeDuration
   value: 1.5
 --- !u!114 &1493451997
 MonoBehaviour:
@@ -18425,10 +18395,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 505
+  itemId: 675
   indentLevel: 2
   anyVar:
-    variable: {fileID: 1493452091}
+    variable: {fileID: 1493452010}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -18459,7 +18429,7 @@ MonoBehaviour:
         gameObjectVal: {fileID: 0}
       integerData:
         integerRef: {fileID: 0}
-        integerVal: 5
+        integerVal: 11
       materialData:
         materialRef: {fileID: 0}
         materialVal: {fileID: 0}
@@ -18756,7 +18726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Menu_Delay
+  key: Game_MenuDelay
   value: 2
 --- !u!114 &1493452007
 MonoBehaviour:
@@ -18812,92 +18782,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1493451796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 533
-  indentLevel: 2
-  description: Set Memory Sprite
-  targetObject: {fileID: 206136930}
-  targetComponentAssemblyName: MemoryLens, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: MemoryLens
-  targetMethod: SetMemory
-  targetMethodText: 'SetMemory (SpriteRenderer, Single, Boolean): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: UnityEngine.SpriteRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      typeFullname: UnityEngine.SpriteRenderer
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 406896943}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Single
-      intValue: 0
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: Grief_RememberFadeDuration
-  - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 1
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &1493452010
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493451796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 500
+  itemId: 679
   indentLevel: 2
   anyVar:
-    variable: {fileID: 1493452091}
+    variable: {fileID: 1493452010}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -18928,7 +18819,7 @@ MonoBehaviour:
         gameObjectVal: {fileID: 0}
       integerData:
         integerRef: {fileID: 0}
-        integerVal: 7
+        integerVal: 2
       materialData:
         materialRef: {fileID: 0}
         materialVal: {fileID: 0}
@@ -19034,6 +18925,21 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &1493452010
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493451796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: Grief_Remember_RecallLast
+  value: 0
 --- !u!114 &1493452011
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21150,7 +21056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Grief_RememberFadeDuration
+  key: Grief_Remember_FadeDuration
   value: 0.75
 --- !u!114 &1493452063
 MonoBehaviour:
@@ -21194,7 +21100,7 @@ MonoBehaviour:
     integerRef: {fileID: 0}
     integerVal: 0
   endValue:
-    integerRef: {fileID: 1493452091}
+    integerRef: {fileID: 1493452010}
     integerVal: 0
   counter:
     integerRef: {fileID: 1493452092}
@@ -21307,16 +21213,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 517
+  itemId: 682
   indentLevel: 0
-  description: Set Memory Sprite
-  targetObject: {fileID: 206136930}
+  description: Set Memory
+  targetObject: {fileID: 2000868197}
   targetComponentAssemblyName: MemoryLens, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: MemoryLens
   targetMethod: SetMemory
-  targetMethodText: 'SetMemory (SpriteRenderer, Single, Boolean): Void'
+  targetMethodText: 'SetMemory (SpriteRenderer, Int32, Int32, Int32, Int32): Void'
   methodParameters:
   - objValue:
       typeAssemblyname: UnityEngine.SpriteRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -21336,12 +21242,12 @@ MonoBehaviour:
       vector3Value: {x: 0, y: 0, z: 0}
     variableKey: 
   - objValue:
-      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Single
+      typeFullname: System.Int32
       intValue: 0
       boolValue: 0
-      floatValue: 3
+      floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       gameObjectValue: {fileID: 0}
@@ -21353,9 +21259,43 @@ MonoBehaviour:
       vector3Value: {x: 0, y: 0, z: 0}
     variableKey: 
   - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
       intValue: 0
       boolValue: 0
       floatValue: 0
@@ -23311,12 +23251,110 @@ MonoBehaviour:
   m_GameObject: {fileID: 1493451796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scope: 0
-  key: Grief_Remember_FocusMax
-  value: 1
+  itemId: 678
+  indentLevel: 2
+  description: Set Memory
+  targetObject: {fileID: 2000868197}
+  targetComponentAssemblyName: MemoryLens, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MemoryLens
+  targetMethod: SetMemory
+  targetMethodText: 'SetMemory (SpriteRenderer, Int32, Int32, Int32, Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: UnityEngine.SpriteRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: UnityEngine.SpriteRenderer
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 406896943}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 3
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 5
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 10
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: Grief_Remember_RecallLast
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &1493452092
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -23330,7 +23368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Grief_Remember_FocusStep
+  key: Grief_Remember_RecallStep
   value: 0
 --- !u!114 &1493452093
 MonoBehaviour:
@@ -23375,12 +23413,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 469
   indentLevel: 0
-  fStep:
-    integerRef: {fileID: 1493452092}
-    integerVal: 0
-  fLastStep:
-    integerRef: {fileID: 1493452091}
-    integerVal: 0
+  errorMessage: 
+  referencedVariables: []
+  <CommandIndex>k__BackingField: 0
+  <IsExecuting>k__BackingField: 0
+  <ExecutingIconTimer>k__BackingField: 0
+  <ParentBlock>k__BackingField: {fileID: 1493452096}
+  fStep: {integerRef: {fileID: 1493452092}, integerVal: 0}
+  fLastStep: {integerRef: {fileID: 0}, integerVal: 0}
   fLens: {fileID: 206136932}
   fShouldAnimateLens: 1
 --- !u!114 &1493452096
@@ -23399,16 +23439,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1261.4476
     y: 630.50104
-    width: 156.02777
+    width: 158.30795
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 468
-  blockName: Remember (Focus)
+  blockName: Remember (Recall)
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1493452095}
+  - {fileID: 1493451834}
   - {fileID: 1493452100}
   suppressAllAutoSelections: 0
 --- !u!114 &1493452097
@@ -23668,14 +23708,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 471
   indentLevel: 2
-  description: Set Memory Sprite
-  targetObject: {fileID: 206136930}
+  description: Set Memory
+  targetObject: {fileID: 2000868197}
   targetComponentAssemblyName: MemoryLens, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: MemoryLens
   targetMethod: SetMemory
-  targetMethodText: 'SetMemory (SpriteRenderer, Single, Boolean): Void'
+  targetMethodText: 'SetMemory (SpriteRenderer, Int32, Int32, Int32, Int32): Void'
   methodParameters:
   - objValue:
       typeAssemblyname: UnityEngine.SpriteRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -23695,10 +23735,10 @@ MonoBehaviour:
       vector3Value: {x: 0, y: 0, z: 0}
     variableKey: 
   - objValue:
-      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Single
-      intValue: 0
+      typeFullname: System.Int32
+      intValue: 4
       boolValue: 0
       floatValue: 0
       stringValue: 
@@ -23710,13 +23750,13 @@ MonoBehaviour:
       textureValue: {fileID: 0}
       vector2Value: {x: 0, y: 0}
       vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: Grief_RememberFadeDuration
+    variableKey: 
   - objValue:
-      typeAssemblyname: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Boolean
-      intValue: 0
-      boolValue: 1
+      typeFullname: System.Int32
+      intValue: 8
+      boolValue: 0
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -23728,6 +23768,40 @@ MonoBehaviour:
       vector2Value: {x: 0, y: 0}
       vector3Value: {x: 0, y: 0, z: 0}
     variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 10
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 11
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: Grief_Remember_RecallLast
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -23745,10 +23819,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 478
+  itemId: 677
   indentLevel: 2
   anyVar:
-    variable: {fileID: 1493452091}
+    variable: {fileID: 1493452010}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -23779,7 +23853,7 @@ MonoBehaviour:
         gameObjectVal: {fileID: 0}
       integerData:
         integerRef: {fileID: 0}
-        integerVal: 10
+        integerVal: 6
       materialData:
         materialRef: {fileID: 0}
         materialVal: {fileID: 0}
@@ -24075,8 +24149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Grief_Remember_IsFocusing
-  value: 0
+  key: Grief_Remember_IsRecalling
+  value: 1
 --- !u!114 &1493452103
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -24243,7 +24317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 491
   indentLevel: 0
-  description: Unlock Visibility
+  description: Unlock Menu Visibility
   targetObject: {fileID: 1260739477}
   targetComponentAssemblyName: MainMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
@@ -24271,7 +24345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 489
   indentLevel: 0
-  description: Lock Visibility
+  description: Lock Menu Visibility
   targetObject: {fileID: 1260739477}
   targetComponentAssemblyName: MainMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
@@ -24383,8 +24457,8 @@ MonoBehaviour:
   - {fileID: 1493452149}
   - {fileID: 1493452116}
   - {fileID: 1493452108}
+  - {fileID: 1493452201}
   - {fileID: 1493452069}
-  - {fileID: 1493452110}
   - {fileID: 1493452143}
   - {fileID: 1493452066}
   - {fileID: 1493452063}
@@ -24404,12 +24478,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 530
   indentLevel: 0
-  fStep:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  fLastStep:
-    integerRef: {fileID: 0}
-    integerVal: 1
+  errorMessage: 
+  referencedVariables: []
+  <CommandIndex>k__BackingField: 4
+  <IsExecuting>k__BackingField: 0
+  <ExecutingIconTimer>k__BackingField: 0
+  <ParentBlock>k__BackingField: {fileID: 1493452109}
+  fStep: {integerRef: {fileID: 0}, integerVal: 0}
+  fLastStep: {integerRef: {fileID: 0}, integerVal: 1}
   fLens: {fileID: 206136932}
   fShouldAnimateLens: 0
 --- !u!114 &1493452111
@@ -25536,7 +25612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: Grief_LoopStep
+  key: Grief_Step
   value: 0
 --- !u!114 &1493452131
 MonoBehaviour:
@@ -26057,7 +26133,7 @@ MonoBehaviour:
   itemId: 586
   indentLevel: 0
   soundClip: {fileID: 8300000, guid: c6f50fd8669dd409eb8b27151b70ca1f, type: 3}
-  volume: 0.05
+  volume: 0.075
   loop: 1
 --- !u!114 &1493452146
 MonoBehaviour:
@@ -26836,7 +26912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 0
-  key: HasLaunched
+  key: Game_HasLaunched
   value: 0
 --- !u!114 &1493452157
 MonoBehaviour:
@@ -28696,7 +28772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: Grief_Year
-  value: 1
+  value: 0
 --- !u!114 &1493452184
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -29777,6 +29853,124 @@ MonoBehaviour:
   fadeWhenDone:
     booleanRef: {fileID: 0}
     booleanVal: 1
+--- !u!114 &1493452200
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493451796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 684
+  indentLevel: 1
+  description: Set Memory Fade
+  targetObject: {fileID: 2000868197}
+  targetComponentAssemblyName: MemoryLens, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MemoryLens
+  targetMethod: SetFadeDuration
+  targetMethodText: 'SetFadeDuration (Single): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 0.35
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1493452201
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493451796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 683
+  indentLevel: 0
+  description: Set Memory Fade
+  targetObject: {fileID: 2000868197}
+  targetComponentAssemblyName: MemoryLens, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MemoryLens
+  targetMethod: SetFadeDuration
+  targetMethodText: 'SetFadeDuration (Single): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 1.5
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1493452202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493451796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 685
+  indentLevel: 0
+  description: Unlock Menu Visibility
+  targetObject: {fileID: 587066301}
+  targetComponentAssemblyName: MainMenu, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MainMenu
+  targetMethod: UnlockVisibility
+  targetMethodText: 'UnlockVisibility (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &1508883982
 GameObject:
   m_ObjectHideFlags: 0
@@ -30432,93 +30626,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1775584247
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1775584248}
-  - component: {fileID: 1775584251}
-  - component: {fileID: 1775584250}
-  - component: {fileID: 1775584249}
-  m_Layer: 5
-  m_Name: Color
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1775584248
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775584247}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 206136931}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1500, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1775584249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775584247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 642bbcc42a6ec4e91926343c768623aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1775584250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775584247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9490196, g: 0.6392157, b: 0.23529412, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1775584251
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775584247}
-  m_CullTransparentMesh: 0
 --- !u!1 &1785556171
 GameObject:
   m_ObjectHideFlags: 0
@@ -31516,6 +31623,7 @@ GameObject:
   - component: {fileID: 2000868201}
   - component: {fileID: 2000868200}
   - component: {fileID: 2000868199}
+  - component: {fileID: 2000868204}
   m_Layer: 5
   m_Name: MemoryOverlay
   m_TagString: Untagged
@@ -31634,6 +31742,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_TargetDisplay: 0
+--- !u!114 &2000868204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000868197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642bbcc42a6ec4e91926343c768623aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2007412177
 GameObject:
   m_ObjectHideFlags: 0

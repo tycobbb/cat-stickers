@@ -1,59 +1,93 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using F = Fungus;
 using UI = UnityEngine.UI;
 
 public class MemoryLens: MonoBehaviour {
+    // -- constants --
+    private static Color kTransparent = new Color(1, 1, 1, 0);
+
     // -- props --
     private SpriteRenderer mMemory;
-    private float mFadeDuration = 0.0f;
-    private bool mIsAnimating = false;
+    private float mFadeDuration;
+    private List<int> mStepsVisible;
 
     // -- commands --
-    public void SetMemory(SpriteRenderer memory, float fadeDuration, bool shouldAnimateLens = true) {
+    public void SetMemory(
+        SpriteRenderer memory,
+        // InvokeMethod can't use arrays
+        int flash0 = 0,
+        int flash1 = 0,
+        int flash2 = 0,
+        int flash3 = 0
+    ) {
+        // filter awful args
+        List<int> stepsVisible = new List<int> { flash0, flash1, flash2, flash3 };
+        stepsVisible.RemoveAll((step) => step == 0);
+
+        // set memory and hide it
         mMemory = memory;
-        mFadeDuration = fadeDuration;
-        SetPercentComplete(0.0f, shouldAnimateLens);
-    }
+        mMemory.color = kTransparent;
 
-    public void SetPercentComplete(float percent, bool shouldAnimateLens = true) {
-        // stepwise fade the color block
-        if (shouldAnimateLens) {
-            SetLensAlpha(Mathf.Pow(percent, 2));
-        }
-
-        // hide the memory until complete
-        if (percent != 1.0f) {
-            HideMemory();
-        } else {
+        // animate it immediately if are no steps
+        mStepsVisible = stepsVisible;
+        if (mStepsVisible.Count == 0) {
             ShowMemory();
         }
     }
 
-    // -- commands/helpers
-    private void SetLensAlpha(float alpha) {
-        var canvas = GetComponent<CanvasGroup>();
-        canvas.alpha = alpha;
+    public void SetStep(int step) {
+        step += 1;
+
+        // if we reached the last step, show the memory
+        if (step == mStepsVisible[mStepsVisible.Count - 1]) {
+            ShowMemory();
+            return;
+        }
+
+        // otherwise, check if this is one of the visible steps and flash the
+        // memory for a few frames
+        var i = 0;
+        foreach (int visible in mStepsVisible) {
+            if (step == visible) {
+                FlashMemory();
+                break;
+            }
+
+            i++;
+        }
     }
 
-    private void HideMemory() {
+    public void SetFadeDuration(float duration) {
+        mFadeDuration = duration;
+    }
+
+    // -- commands/helpers
+    private void FlashMemory() {
+        ShowMemory(() => {
+            HideMemory();
+        });
+    }
+
+    private void ShowMemory(Action callback = null) {
+        AnimateMemory(Color.white, callback);
+    }
+
+    private void HideMemory(Action callback = null) {
+        AnimateMemory(kTransparent, callback);
+    }
+
+    private void AnimateMemory(Color color, Action callback) {
         if (mMemory == null) {
             return;
         }
 
-        mMemory.color = new Color(1, 1, 1, 0);
-    }
-
-    private void ShowMemory() {
-        if (mMemory == null || mIsAnimating) {
-            return;
-        }
-
-        mIsAnimating = true;
-        F.SpriteFader.FadeSprite(mMemory, Color.white, mFadeDuration, Vector2.zero, () => {
-            mIsAnimating = false;
-            SetLensAlpha(0.0f);
+        F.SpriteFader.FadeSprite(mMemory, color, mFadeDuration, Vector2.zero, () => {
+            if (callback != null) {
+                callback();
+            }
         });
     }
 }
