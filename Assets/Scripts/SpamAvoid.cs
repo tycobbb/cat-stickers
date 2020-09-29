@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using F = Fungus;
 using UI = UnityEngine.UI;
 
 public class SpamAvoid: MonoBehaviour {
     // -- constants --
-    private const int kLastGeneration = 3;
-    private const int kGenerationBase = 4;
+    private static int[] kSpawnCountByGeneration = new int[] {
+        1,
+        4,
+        16,
+        40
+    };
 
     // -- fields --
     [Tooltip("The actual menu")]
     [SerializeField]
     protected GameObject fMenu;
+
+    [Tooltip("Sound effect to play on spam")]
+    [SerializeField]
+    protected AudioClip fSound;
 
     [Tooltip("The message on send on completion")]
     [SerializeField]
@@ -86,9 +95,8 @@ public class SpamAvoid: MonoBehaviour {
     }
 
     private IEnumerator SpawnButtons() {
+        var count = kSpawnCountByGeneration[mGeneration];
         var generation = mGeneration++;
-        var count = System.Math.Pow(kGenerationBase, generation);
-        // var count = System.Math.Max(1, generation * kGenerationScale);
 
         for (var i = 0; i < count; i++) {
             var spawned = Object.Instantiate(mPrefab, transform);
@@ -102,10 +110,16 @@ public class SpamAvoid: MonoBehaviour {
             var button = spawned.GetComponentInChildren<UI.Button>();
             button.onClick.AddListener(this.DidClickButton(spawned));
 
+            // show button
             spawned.SetActive(true);
 
-            yield return 0;
-            if (generation < 2) {
+            // play sound
+            var audio = F.FungusManager.Instance.MusicManager;
+            audio.PlaySound(fSound, 1.0f);
+
+            // wait a few frames between spawns
+            var wait = generation < 2 ? 6 : 3;
+            for (var j = 0; j < wait; j++) {
                 yield return 0;
             }
         }
@@ -116,10 +130,10 @@ public class SpamAvoid: MonoBehaviour {
         return () => {
             Destroy(spawned);
 
-            if (mGeneration <= kLastGeneration) {
-                StartCoroutine(SpawnButtons());
-            } else {
+            if (mGeneration > LastGeneration()) {
                 DidClickTerminalButton();
+            } else {
+                StartCoroutine(SpawnButtons());
             }
         };
     }
@@ -131,5 +145,10 @@ public class SpamAvoid: MonoBehaviour {
 
         mIsComplete = true;
         Fungus.Flowchart.BroadcastFungusMessage(fOnComplete);
+    }
+
+    // -- queries --
+    private int LastGeneration() {
+        return kSpawnCountByGeneration.Length - 1;
     }
 }

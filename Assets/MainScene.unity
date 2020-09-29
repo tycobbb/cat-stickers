@@ -1636,6 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fMenu: {fileID: 587066301}
+  fSound: {fileID: 8300000, guid: 6f159d2d36f5c477389f1727f8c563fb, type: 3}
   fOnComplete: SpamComplete
 --- !u!1 &427235871
 GameObject:
@@ -3256,10 +3257,7 @@ MonoBehaviour:
   loop: 1
   targetAudioSource: {fileID: 0}
   audioMode: 0
-  beepSounds:
-  - {fileID: 8300000, guid: 774486030b696474e8b3cf7f178123da, type: 3}
-  - {fileID: 8300000, guid: f637c5ce9d10e45c7855ed89bfc6b97e, type: 3}
-  - {fileID: 8300000, guid: c53b7c20372e444c6bd7f2ac0729bbe2, type: 3}
+  beepSounds: []
   soundEffect: {fileID: 0}
   inputSound: {fileID: 8300000, guid: 14a396b1562834718b2d52b9c4639264, type: 3}
 --- !u!114 &634169979
@@ -7557,8 +7555,6 @@ GameObject:
   - component: {fileID: 1493451853}
   - component: {fileID: 1493451863}
   - component: {fileID: 1493451860}
-  - component: {fileID: 1493451833}
-  - component: {fileID: 1493451831}
   - component: {fileID: 1493451844}
   - component: {fileID: 1493451797}
   - component: {fileID: 1493451861}
@@ -7902,12 +7898,9 @@ GameObject:
   - component: {fileID: 1493452025}
   - component: {fileID: 1493452186}
   - component: {fileID: 1493452190}
-  - component: {fileID: 1493452189}
   - component: {fileID: 1493452188}
   - component: {fileID: 1493452187}
   - component: {fileID: 1493452047}
-  - component: {fileID: 1493452041}
-  - component: {fileID: 1493452040}
   - component: {fileID: 1493452039}
   - component: {fileID: 1493452038}
   - component: {fileID: 1493452037}
@@ -7934,6 +7927,12 @@ GameObject:
   - component: {fileID: 1493452202}
   - component: {fileID: 1493451824}
   - component: {fileID: 1493452203}
+  - component: {fileID: 1493452040}
+  - component: {fileID: 1493451831}
+  - component: {fileID: 1493452041}
+  - component: {fileID: 1493451833}
+  - component: {fileID: 1493452189}
+  - component: {fileID: 1493452204}
   m_Layer: 0
   m_Name: MainFlowchart
   m_TagString: Untagged
@@ -7990,7 +7989,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 443.96576
     y: -232.60843
-    width: 76.79196
+    width: 78.50209
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 1
@@ -8021,7 +8020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 285.09897, y: 228.1941}
+  scrollPos: {x: 470.93268, y: 126.726616}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 569
@@ -8032,8 +8031,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1493451804}
+  selectedCommands:
+  - {fileID: 1493451851}
   variables:
   - {fileID: 1493451961}
   - {fileID: 1493451939}
@@ -8093,7 +8094,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 423.82123
     y: -38.420868
-    width: 113.84468
+    width: 118.405014
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8168,7 +8169,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 446.28796
     y: 256.5048
-    width: 74.511795
+    width: 76.221924
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8177,7 +8178,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1493451831}
   - {fileID: 1493451911}
   - {fileID: 1493451867}
   - {fileID: 1493451989}
@@ -8210,8 +8210,10 @@ MonoBehaviour:
   - {fileID: 1493451843}
   - {fileID: 1493452027}
   - {fileID: 1493451852}
+  - {fileID: 1493452189}
   - {fileID: 1493451861}
   - {fileID: 1493451851}
+  - {fileID: 1493452204}
   - {fileID: 1493451864}
   - {fileID: 1493451847}
   suppressAllAutoSelections: 0
@@ -8397,7 +8399,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 601.9979
     y: 13.127094
-    width: 114.984764
+    width: 118.405014
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8466,8 +8468,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 424.03424
-    y: 61.291
-    width: 117.26493
+    y: 53.310417
+    width: 120.68518
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9642,18 +9644,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1493451796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 83
+  itemId: 689
   indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1493451863}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 1
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 5
+  durationOLD: 0
 --- !u!114 &1493451832
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9690,15 +9689,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1493451796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Script: {fileID: 11500000, guid: a4015e84616cc45cfb498561373899d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 81
+  itemId: 693
   indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 0.5
-  durationOLD: 0
+  volume: 1
+  fadeDuration: 7
+  waitUntilFinished: 0
 --- !u!114 &1493451834
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9839,7 +9837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 55
   indentLevel: 1
-  storyText: I was just talking to him yesterday.
+  storyText: I was talking to him two days ago...
   description: 
   character: {fileID: 510461243}
   portrait: {fileID: 0}
@@ -10061,7 +10059,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 429.386
     y: 349.4461
-    width: 110.42443
+    width: 111.564514
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10135,7 +10133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 65
   indentLevel: 1
-  storyText: dont think I can't be here anymore.
+  storyText: I can't be here anymore.
   description: 
   character: {fileID: 510461243}
   portrait: {fileID: 0}
@@ -10162,7 +10160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 638
   indentLevel: 1
-  storyText: I'm not sure.
+  storyText: ...
   description: 
   character: {fileID: 588538369}
   portrait: {fileID: 0}
@@ -10206,7 +10204,7 @@ MonoBehaviour:
   itemId: 71
   indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1493451848}
+  targetBlock: {fileID: 1493451816}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -10294,7 +10292,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 240.03172
     y: -230.01945
-    width: 116.12485
+    width: 117.26493
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10562,7 +10560,7 @@ MonoBehaviour:
   itemId: 78
   indentLevel: 0
   soundClip: {fileID: 8300000, guid: 7bc39efa34fdc465aa2dbc4e31a771ed, type: 3}
-  volume: 0.5
+  volume: 1
   waitUntilFinished: 0
 --- !u!114 &1493451861
 MonoBehaviour:
@@ -10635,8 +10633,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 596.8957
-    y: 257.06497
-    width: 120.68518
+    y: 258.20505
+    width: 124.10543
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10645,8 +10643,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1493451833}
+  - {fileID: 1493452041}
   - {fileID: 1493451860}
+  - {fileID: 1493451833}
   suppressAllAutoSelections: 0
 --- !u!114 &1493451864
 MonoBehaviour:
@@ -10851,7 +10850,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 913.20184
     y: 467.9821
-    width: 83.63246
+    width: 84.20251
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10954,7 +10953,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 434.1644
     y: 440.92178
-    width: 102.44385
+    width: 103.58393
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11309,7 +11308,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 770.3475
     y: 549.77484
-    width: 76.79196
+    width: 78.50209
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14533,8 +14532,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 915.2785
-    y: 550.9399
-    width: 82.492386
+    y: 549.7998
+    width: 83.06242
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14643,15 +14642,15 @@ MonoBehaviour:
       AnonR: I
       believe it was possession.
 
-      AnonR: But I didn''t have my spectrometer.
+      AnonR: But I didn''t have my spectrometer
+      handy.
 
-      AnonL:
-      ...
+      AnonL: ...
 
-      AnonL: I wish I had a better memory.
+      AnonL: I wish I had a better last memory.
 
-      AnonR nowait nofade:
-      I don''t know, that''s a pretty great memory.'
+      AnonR
+      nowait nofade: I don''t know, that''s a pretty great memory.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -14845,7 +14844,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 612.6415
     y: 549.7551
-    width: 101.8738
+    width: 104.724014
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14875,7 +14874,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 430.11545
     y: 549.1091
-    width: 110.99448
+    width: 112.7046
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15990,7 +15989,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 434.59174
     y: 645.54224
-    width: 103.013885
+    width: 104.724014
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16088,7 +16087,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 431.13452
     y: 758.33844
-    width: 112.13455
+    width: 113.84468
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16195,7 +16194,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 436.1155
     y: 866.7562
-    width: 104.15398
+    width: 105.8641
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16272,7 +16271,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 444.9708
     y: -137.91359
-    width: 74.511795
+    width: 76.221924
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16657,7 +16656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: Debug
-  value: 1
+  value: 0
 --- !u!114 &1493451962
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -16704,7 +16703,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 905.9533
     y: 630.6432
-    width: 109.854385
+    width: 110.42443
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -18597,7 +18596,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 5
+    floatVal: 3
   durationOLD: 0
 --- !u!114 &1493452001
 MonoBehaviour:
@@ -18651,7 +18650,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 394.67734
     y: 153.44098
-    width: 173.69907
+    width: 178.82945
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -18660,6 +18659,8 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1493452002}
   commandList:
+  - {fileID: 1493451831}
+  - {fileID: 1493452040}
   - {fileID: 1493452000}
   - {fileID: 1493452001}
   - {fileID: 1493452005}
@@ -19936,7 +19937,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1276.3479
     y: 550.7659
-    width: 120.11514
+    width: 122.96535
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -20534,15 +20535,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 659
+  itemId: 688
   indentLevel: 0
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1493452023}
+  targetBlock: {fileID: 1493451863}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
   startIndex: 0
-  callMode: 0
+  callMode: 1
 --- !u!114 &1493452041
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -20552,15 +20553,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1493451796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Script: {fileID: 11500000, guid: a4015e84616cc45cfb498561373899d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 658
+  itemId: 692
   indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 10
-  durationOLD: 0
+  volume: 0.33
+  fadeDuration: 0
+  waitUntilFinished: 0
 --- !u!114 &1493452042
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -20660,7 +20660,7 @@ MonoBehaviour:
   itemId: 396
   indentLevel: 2
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1493452189}
+  targetBlock: {fileID: 1493452190}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -20703,7 +20703,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1075.6241
     y: 303.54636
-    width: 133.79614
+    width: 136.64636
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -20735,7 +20735,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1080.6968
     y: 219.33228
-    width: 121.825264
+    width: 124.10543
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -21124,7 +21124,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1071.6414
     y: 631.1188
-    width: 148.04718
+    width: 150.32736
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -23427,7 +23427,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1261.4476
     y: 630.50104
-    width: 154.8877
+    width: 158.30795
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -24433,7 +24433,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 214.39645
     y: 959.5831
-    width: 173.12903
+    width: 175.4092
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -25435,7 +25435,7 @@ MonoBehaviour:
       AnonL: Did you ever watch Jurassic Park?
 
       AnonR:
-      No, I''ve been avoiding it on principle.
+      No, I sort of avoid it on principle.
 
       AnonL: Yeah, I haven''t watched
       Terminator either.
@@ -25530,7 +25530,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 14.991142
     y: 644.8145
-    width: 125.81556
+    width: 129.80585
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -25560,7 +25560,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 744.894
     y: 683.10077
-    width: 128.66577
+    width: 130.94594
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -26082,7 +26082,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 8.108746
     y: 1033.0657
-    width: 146.9071
+    width: 149.18727
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -26196,7 +26196,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 2.6816344
     y: 895.4264
-    width: 154.31766
+    width: 157.16786
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -27608,7 +27608,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1272.8556
     y: 304.0455
-    width: 126.385605
+    width: 128.66577
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28832,7 +28832,10 @@ MonoBehaviour:
       AnonL:
       The brain uploading?
 
-      AnonR: No, no. That other one you said.'
+      AnonR: No, no. The one you said.
+
+      AnonR:
+      Learning.'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -28879,7 +28882,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1073.9645
     y: 551.0055
-    width: 145.19699
+    width: 148.04718
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -28900,25 +28903,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1493451796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 1073.9634
-    y: 466.6394
-    width: 144.0569
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 663
-  blockName: Listen (Stop@10)
-  description: 
-  eventHandler: {fileID: 0}
-  commandList:
-  - {fileID: 1493452041}
-  - {fileID: 1493452040}
-  suppressAllAutoSelections: 0
+  itemId: 694
+  indentLevel: 1
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 2
+  durationOLD: 0
 --- !u!114 &1493452190
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -28935,7 +28928,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1073.8812
     y: 386.31213
-    width: 137.78644
+    width: 141.2067
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -29965,6 +29958,33 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 0.416
   durationOLD: 0
+--- !u!114 &1493452204
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493451796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 695
+  indentLevel: 1
+  storyText: Can we go somewhere where we can uh, think?
+  description: 
+  character: {fileID: 510461243}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1508883982
 GameObject:
   m_ObjectHideFlags: 0
