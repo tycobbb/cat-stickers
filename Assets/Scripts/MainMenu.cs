@@ -13,6 +13,10 @@ public class MainMenu: F.MenuDialog {
     [SerializeField]
     private float fFadeDuration = 0.35f;
 
+    [Tooltip("The click sound")]
+    [SerializeField]
+    private AudioClip fSound;
+
     // -- props --
     private bool mIsAwake = false;
     private bool mIsVisibilityLocked = false;
@@ -100,19 +104,7 @@ public class MainMenu: F.MenuDialog {
         base.Clear();
     }
 
-    // -- commands --
-    public void SetFadeDuration(float duration) {
-        fFadeDuration = duration;
-    }
-
-    public void LockVisibility() {
-        mIsVisibilityLocked = true;
-    }
-
-    public void UnlockVisibility() {
-        mIsVisibilityLocked = false;
-    }
-
+    // -- overrides/helpers
     private void ShowDividers() {
         var i = 0;
         var dividers = gameObject.GetComponentsInChildren<UI.Image>(true);
@@ -128,6 +120,24 @@ public class MainMenu: F.MenuDialog {
             divider.gameObject.SetActive(isVisible);
             i++;
         }
+    }
+
+    // -- commands --
+    public void SetFadeDuration(float duration) {
+        fFadeDuration = duration;
+    }
+
+    public void LockVisibility() {
+        mIsVisibilityLocked = true;
+    }
+
+    public void UnlockVisibility() {
+        mIsVisibilityLocked = false;
+    }
+
+    public void PlaySound() {
+        var audio = F.FungusManager.Instance.MusicManager;
+        audio.PlaySound(fSound, 1.0f);
     }
 
     // -- commands/animation
