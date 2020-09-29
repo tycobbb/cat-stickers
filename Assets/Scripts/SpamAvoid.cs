@@ -6,8 +6,8 @@ using UI = UnityEngine.UI;
 
 public class SpamAvoid: MonoBehaviour {
     // -- constants --
-    private const int kLastGeneration = 4;
-    private const int kGenerationBase = 3;
+    private const int kLastGeneration = 3;
+    private const int kGenerationBase = 4;
 
     // -- fields --
     [Tooltip("The actual menu")]
@@ -81,6 +81,7 @@ public class SpamAvoid: MonoBehaviour {
     // -- commands --
     private IEnumerator SpawnInitialButton() {
         yield return 0;
+        mGeneration = 0;
         StartCoroutine(SpawnButtons());
     }
 
@@ -104,6 +105,9 @@ public class SpamAvoid: MonoBehaviour {
             spawned.SetActive(true);
 
             yield return 0;
+            if (generation < 2) {
+                yield return 0;
+            }
         }
     }
 
