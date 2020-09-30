@@ -68,7 +68,7 @@ public class Calendar: MonoBehaviour {
         var year = mDate.Year;
 
         // next year if the birthday has already happened
-        if (mDate.Month > 9 || (mDate.Month == 9 && mDate.Day > 18)) {
+        if (mDate.Month > 9 || (mDate.Month == 9 && mDate.Day >= 18)) {
             year += 1;
         }
 
